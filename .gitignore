@@ -1,0 +1,23 @@
+# ---- Never commit business data ----
+data/
+*.db
+*.db-wal
+*.db-shm
+*.xlsx
+*.xls
+*.pdf
+.env
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+.claude/

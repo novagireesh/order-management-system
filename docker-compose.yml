@@ -1,0 +1,26 @@
+# Order Management System - internet deployment (app + automatic HTTPS via Caddy)
+services:
+  oms:
+    build: .
+    restart: unless-stopped
+    environment:
+      - OMS_ADMIN_PASSWORD=${OMS_ADMIN_PASSWORD:-admin123}
+    volumes:
+      - ./data:/data
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - oms
+volumes:
+  caddy_data:
+  caddy_config:

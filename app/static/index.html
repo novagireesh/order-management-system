@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Management System</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="topbar"><button id="burger" class="btn sm">&#9776;</button><span id="brand-top">OMS</span></div>
+<div id="side">
+  <div class="logo"><span id="brand-side"></span><small>Order Management System</small></div>
+  <nav>
+    <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+    <div class="sec">Buyer orders</div>
+    <a href="#/order/new" data-route="order">+ New Buyer PO</a>
+    <a href="#/orders" data-route="orders">All Orders</a>
+    <div class="sec">Production</div>
+    <a href="#/assign" data-route="assign">+ Assign to Contractor</a>
+    <a href="#/pos" data-route="pos">Contractor POs</a>
+    <a href="#/production" data-route="production">Production Tracking</a>
+    <a href="#/shop" data-route="shop">Shop Floor (mobile)</a>
+    <div class="sec">Dispatch</div>
+    <a href="#/dispatch" data-route="dispatch">+ Dispatch</a>
+    <a href="#/reports/remaining_by_buyer" data-route="remaining">Remaining to Dispatch</a>
+    <div class="sec">Reports</div>
+    <a href="#/reports" data-route="reports">All Reports</a>
+    <a href="#/documents" data-route="documents">Generated PDFs</a>
+    <div class="sec">Masters</div>
+    <a href="#/products" data-route="products">Products</a>
+    <a href="#/buyers" data-route="buyers">Buyers</a>
+    <a href="#/contractors" data-route="contractors">Contractors</a>
+    <a href="#/users" data-route="users">Users &amp; logins</a>
+    <a href="#/settings" data-route="settings">Settings</a>
+    <div class="sec">Account</div>
+    <a href="#/account" data-route="account">My account</a>
+  </nav>
+  <div class="userbox"><div id="whoami"></div><button class="btn sm" id="logout">Log out</button></div>
+</div>
+<div id="main"></div>
+<div id="toast"></div>
+<div id="modal"><div class="box" id="modalbox"></div></div>
+<datalist id="product-codes"></datalist>
+<script src="/static/app.js"></script>
+</body>
+</html>
